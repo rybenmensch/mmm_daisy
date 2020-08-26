@@ -1,0 +1,205 @@
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 28, 1
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 2
+  10              		.eabi_attribute 34, 1
+  11              		.eabi_attribute 18, 4
+  12              		.file	"buffer.cpp"
+  13              		.text
+  14              		.section	.text._ZN6Buffer4InitEPfS0_i,"ax",%progbits
+  15              		.align	1
+  16              		.p2align 2,,3
+  17              		.global	_ZN6Buffer4InitEPfS0_i
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu fpv5-d16
+  24              	_ZN6Buffer4InitEPfS0_i:
+  25              		@ args = 0, pretend = 0, frame = 0
+  26              		@ frame_needed = 0, uses_anonymous_args = 0
+  27              		@ link register save eliminated.
+  28 0000 10B4     		push	{r4}
+  29 0002 0024     		movs	r4, #0
+  30 0004 A342     		cmp	r3, r4
+  31 0006 0481     		strh	r4, [r0, #8]	@ movhi
+  32 0008 C0E90312 		strd	r1, r2, [r0, #12]
+  33 000c C0E90043 		strd	r4, r3, [r0]
+  34 0010 08DD     		ble	.L1
+  35 0012 02EB8300 		add	r0, r2, r3, lsl #2
+  36              	.L3:
+  37 0016 0023     		movs	r3, #0
+  38 0018 42F8043B 		str	r3, [r2], #4	@ float
+  39 001c 8242     		cmp	r2, r0
+  40 001e 41F8043B 		str	r3, [r1], #4	@ float
+  41 0022 F8D1     		bne	.L3
+  42              	.L1:
+  43 0024 5DF8044B 		ldr	r4, [sp], #4
+  44 0028 7047     		bx	lr
+  46 002a 00BF     		.section	.text._ZN6Buffer5ResetEv,"ax",%progbits
+  47              		.align	1
+  48              		.p2align 2,,3
+  49              		.global	_ZN6Buffer5ResetEv
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  53              		.fpu fpv5-d16
+  55              	_ZN6Buffer5ResetEv:
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+  59 0000 4268     		ldr	r2, [r0, #4]
+  60 0002 002A     		cmp	r2, #0
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 2
+
+
+  61 0004 0ADD     		ble	.L7
+  62 0006 D0E90313 		ldrd	r1, r3, [r0, #12]
+  63 000a 03EB8200 		add	r0, r3, r2, lsl #2
+  64              	.L9:
+  65 000e 0022     		movs	r2, #0
+  66 0010 43F8042B 		str	r2, [r3], #4	@ float
+  67 0014 8342     		cmp	r3, r0
+  68 0016 41F8042B 		str	r2, [r1], #4	@ float
+  69 001a F8D1     		bne	.L9
+  70              	.L7:
+  71 001c 7047     		bx	lr
+  73 001e 00BF     		.section	.text._ZN6Buffer9NormalizeEv,"ax",%progbits
+  74              		.align	1
+  75              		.p2align 2,,3
+  76              		.global	_ZN6Buffer9NormalizeEv
+  77              		.syntax unified
+  78              		.thumb
+  79              		.thumb_func
+  80              		.fpu fpv5-d16
+  82              	_ZN6Buffer9NormalizeEv:
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  86 0000 4168     		ldr	r1, [r0, #4]
+  87 0002 0029     		cmp	r1, #0
+  88 0004 1DDD     		ble	.L11
+  89 0006 C368     		ldr	r3, [r0, #12]
+  90 0008 DFED0E7A 		vldr.32	s15, .L19
+  91 000c 03EB8101 		add	r1, r3, r1, lsl #2
+  92 0010 1A46     		mov	r2, r3
+  93              	.L15:
+  94 0012 B2EC017A 		vldmia.32	r2!, {s14}
+  95 0016 B4EEE77A 		vcmpe.f32	s14, s15
+  96 001a F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+  97 001e 58BF     		it	pl
+  98 0020 F0EE477A 		vmovpl.f32	s15, s14
+  99 0024 9142     		cmp	r1, r2
+ 100 0026 F4D1     		bne	.L15
+ 101 0028 F7EE006A 		vmov.f32	s13, #1.0e+0
+ 102 002c 86EEA77A 		vdiv.f32	s14, s13, s15
+ 103              	.L17:
+ 104 0030 D3ED007A 		vldr.32	s15, [r3]
+ 105 0034 67EE277A 		vmul.f32	s15, s14, s15
+ 106 0038 E3EC017A 		vstmia.32	r3!, {s15}
+ 107 003c 8B42     		cmp	r3, r1
+ 108 003e F7D1     		bne	.L17
+ 109 0040 7047     		bx	lr
+ 110              	.L11:
+ 111 0042 7047     		bx	lr
+ 112              	.L20:
+ 113              		.align	2
+ 114              	.L19:
+ 115 0044 00000000 		.word	0
+ 117              		.section	.text._ZN6Buffer10CopyToSwapEv,"ax",%progbits
+ 118              		.align	1
+ 119              		.p2align 2,,3
+ 120              		.global	_ZN6Buffer10CopyToSwapEv
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 3
+
+
+ 121              		.syntax unified
+ 122              		.thumb
+ 123              		.thumb_func
+ 124              		.fpu fpv5-d16
+ 126              	_ZN6Buffer10CopyToSwapEv:
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ 130 0000 4168     		ldr	r1, [r0, #4]
+ 131 0002 0029     		cmp	r1, #0
+ 132 0004 09DD     		ble	.L21
+ 133 0006 D0E90332 		ldrd	r3, r2, [r0, #12]
+ 134 000a 03EB8100 		add	r0, r3, r1, lsl #2
+ 135              	.L23:
+ 136 000e 53F8041B 		ldr	r1, [r3], #4	@ float
+ 137 0012 8342     		cmp	r3, r0
+ 138 0014 42F8041B 		str	r1, [r2], #4	@ float
+ 139 0018 F9D1     		bne	.L23
+ 140              	.L21:
+ 141 001a 7047     		bx	lr
+ 143              		.section	.text._ZN6Buffer5WriteEf,"ax",%progbits
+ 144              		.align	1
+ 145              		.p2align 2,,3
+ 146              		.global	_ZN6Buffer5WriteEf
+ 147              		.syntax unified
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.fpu fpv5-d16
+ 152              	_ZN6Buffer5WriteEf:
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155 0000 D0E90032 		ldrd	r3, r2, [r0]
+ 156 0004 10B5     		push	{r4, lr}
+ 157 0006 9342     		cmp	r3, r2
+ 158 0008 0446     		mov	r4, r0
+ 159 000a 07DA     		bge	.L26
+ 160 000c C268     		ldr	r2, [r0, #12]
+ 161 000e 591C     		adds	r1, r3, #1
+ 162 0010 02EB8303 		add	r3, r2, r3, lsl #2
+ 163 0014 0160     		str	r1, [r0]
+ 164 0016 83ED000A 		vstr.32	s0, [r3]
+ 165              	.L25:
+ 166 001a 10BD     		pop	{r4, pc}
+ 167              	.L26:
+ 168 001c 0122     		movs	r2, #1
+ 169 001e 0023     		movs	r3, #0
+ 170 0020 0281     		strh	r2, [r0, #8]	@ movhi
+ 171 0022 0360     		str	r3, [r0]
+ 172 0024 FFF7FEFF 		bl	_ZN6Buffer9NormalizeEv
+ 173 0028 4068     		ldr	r0, [r0, #4]
+ 174 002a 0028     		cmp	r0, #0
+ 175 002c F5DD     		ble	.L25
+ 176 002e D4E90332 		ldrd	r3, r2, [r4, #12]
+ 177 0032 03EB8000 		add	r0, r3, r0, lsl #2
+ 178              	.L29:
+ 179 0036 53F8041B 		ldr	r1, [r3], #4	@ float
+ 180 003a 8342     		cmp	r3, r0
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 4
+
+
+ 181 003c 42F8041B 		str	r1, [r2], #4	@ float
+ 182 0040 F9D1     		bne	.L29
+ 183 0042 10BD     		pop	{r4, pc}
+ 185              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 buffer.cpp
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:15     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:24     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 _ZN6Buffer4InitEPfS0_i
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:47     .text._ZN6Buffer5ResetEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:55     .text._ZN6Buffer5ResetEv:0000000000000000 _ZN6Buffer5ResetEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:74     .text._ZN6Buffer9NormalizeEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:82     .text._ZN6Buffer9NormalizeEv:0000000000000000 _ZN6Buffer9NormalizeEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:115    .text._ZN6Buffer9NormalizeEv:0000000000000044 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:118    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:126    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 _ZN6Buffer10CopyToSwapEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:144    .text._ZN6Buffer5WriteEf:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:152    .text._ZN6Buffer5WriteEf:0000000000000000 _ZN6Buffer5WriteEf
+
+NO UNDEFINED SYMBOLS
