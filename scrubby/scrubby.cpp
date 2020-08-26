@@ -124,10 +124,14 @@ void UpdateEncoder(){
     //but this is also dumb because we need the global variable active_voice
     //for this...
 
+    Voices[0].SetTransposition(0);
+    Voices[1].SetTransposition(-5);
+    /*
     for(int i=0;i<voice_amt;i++){
         if(Voices[i].active){
             float temp = Voices[i].transpose + inc;
             Voices[i].SetTransposition(clamp(temp, -12, 12));
         }
     }
+    */
 }

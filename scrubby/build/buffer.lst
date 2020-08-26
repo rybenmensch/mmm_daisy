@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 1
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 1
   58              		@ link register save eliminated.
   59 0000 4268     		ldr	r2, [r0, #4]
   60 0002 002A     		cmp	r2, #0
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 2
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s 			page 2
 
 
   61 0004 0ADD     		ble	.L7
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 1
  118              		.align	1
  119              		.p2align 2,,3
  120              		.global	_ZN6Buffer10CopyToSwapEv
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 3
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s 			page 3
 
 
  121              		.syntax unified
@@ -178,28 +178,28 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 1
  178              	.L29:
  179 0036 53F8041B 		ldr	r1, [r3], #4	@ float
  180 003a 8342     		cmp	r3, r0
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 4
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s 			page 4
 
 
  181 003c 42F8041B 		str	r1, [r2], #4	@ float
  182 0040 F9D1     		bne	.L29
  183 0042 10BD     		pop	{r4, pc}
  185              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s 			page 5
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 buffer.cpp
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:15     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:24     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 _ZN6Buffer4InitEPfS0_i
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:47     .text._ZN6Buffer5ResetEv:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:55     .text._ZN6Buffer5ResetEv:0000000000000000 _ZN6Buffer5ResetEv
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:74     .text._ZN6Buffer9NormalizeEv:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:82     .text._ZN6Buffer9NormalizeEv:0000000000000000 _ZN6Buffer9NormalizeEv
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:115    .text._ZN6Buffer9NormalizeEv:0000000000000044 $d
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:118    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:126    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 _ZN6Buffer10CopyToSwapEv
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:144    .text._ZN6Buffer5WriteEf:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccuMJrKs.s:152    .text._ZN6Buffer5WriteEf:0000000000000000 _ZN6Buffer5WriteEf
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:15     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:24     .text._ZN6Buffer4InitEPfS0_i:0000000000000000 _ZN6Buffer4InitEPfS0_i
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:47     .text._ZN6Buffer5ResetEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:55     .text._ZN6Buffer5ResetEv:0000000000000000 _ZN6Buffer5ResetEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:74     .text._ZN6Buffer9NormalizeEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:82     .text._ZN6Buffer9NormalizeEv:0000000000000000 _ZN6Buffer9NormalizeEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:115    .text._ZN6Buffer9NormalizeEv:0000000000000044 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:118    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:126    .text._ZN6Buffer10CopyToSwapEv:0000000000000000 _ZN6Buffer10CopyToSwapEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:144    .text._ZN6Buffer5WriteEf:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTWPGcL.s:152    .text._ZN6Buffer5WriteEf:0000000000000000 _ZN6Buffer5WriteEf
 
 NO UNDEFINED SYMBOLS

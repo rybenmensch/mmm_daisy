@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
   56 004c 8261     		str	r2, [r0, #24]	@ float
   57 004e 86ED008A 		vstr.32	s16, [r6]
   58 0052 2B60     		str	r3, [r5]	@ float
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 2
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 2
 
 
   59              	.L3:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  113 00e4 4FF0000B 		mov	fp, #0
  114 00e8 DFF8D8E1 		ldr	lr, .L28+92
  115 00ec A444     		add	ip, ip, r4
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 3
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 3
 
 
  116 00ee 6B48     		ldr	r0, .L28+52
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  170 01a4 20EE250A 		vmul.f32	s0, s0, s11
  171 01a8 20EE060A 		vmul.f32	s0, s0, s12
  172 01ac B4EEE40A 		vcmpe.f32	s0, s9
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 4
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 4
 
 
  173 01b0 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  227 0244 0AB1     		cbz	r2, .L1
  228 0246 0022     		movs	r2, #0
  229 0248 E254     		strb	r2, [r4, r3]
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 5
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 5
 
 
  230              	.L1:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  286 0002 0144     		add	r1, r1, r0
  287 0004 D1ED007A 		vldr.32	s15, [r1]
  288 0008 B4EE670A 		vcmp.f32	s0, s15
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 6
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 6
 
 
  289 000c F0B5     		push	{r4, r5, r6, r7, lr}
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  343 00b8 15D4     		bmi	.L33
  344 00ba 043D     		subs	r5, r5, #4
  345 00bc 2544     		add	r5, r5, r4
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 7
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 7
 
 
  346 00be 85ED000A 		vstr.32	s0, [r5]
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  402 0018 03B9     		cbnz	r3, .L43
  403 001a A368     		ldr	r3, [r4, #8]
  404              	.L43:
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 8
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 8
 
 
  405 001c CE4A     		ldr	r2, .L55
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  459 00ac 2744     		add	r7, r7, r4
  460 00ae D9ED006A 		vldr.32	s13, [r9]
  461 00b2 A25C     		ldrb	r2, [r4, r2]	@ zero_extendqisi2
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 9
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 9
 
 
  462 00b4 37EE667A 		vsub.f32	s14, s14, s13
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  516 016c 03EB820E 		add	lr, r3, r2, lsl #2
  517 0170 B8EEE66A 		vcvt.f32.s32	s12, s13
  518 0174 C8F30D02 		ubfx	r2, r8, #0, #14
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 10
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 10
 
 
  519 0178 CEF80C60 		str	r6, [lr, #12]	@ float
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  573 022e 2544     		add	r5, r5, r4
  574 0230 83EA4333 		eor	r3, r3, r3, lsl #13
  575 0234 DFED5C6A 		vldr.32	s13, .L55+80
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 11
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 11
 
 
  576 0238 95ED004A 		vldr.32	s8, [r5]
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  630 02f0 87EA4717 		eor	r7, r7, r7, lsl #5
  631 02f4 CEEB0E2E 		rsb	lr, lr, lr, lsl #8
  632 02f8 A0FB0780 		umull	r8, r0, r0, r7
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 12
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 12
 
 
  633 02fc A2EB0E02 		sub	r2, r2, lr
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  687 03b4 94000200 		.word	131220
  688 03b8 74000200 		.word	131188
  689 03bc 78000200 		.word	131192
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 13
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 13
 
 
  690 03c0 30000100 		.word	65584
@@ -750,24 +750,24 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 1
  721              	_ZZN7daisysp6myrandEvE4seed:
  722 0000 01000000 		.word	1
  723              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s 			page 14
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 voice.cpp
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:15     .text._ZN7daisysp5Voice4InitEii:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:24     .text._ZN7daisysp5Voice4InitEii:0000000000000000 _ZN7daisysp5Voice4InitEii
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:246    .text._ZN7daisysp5Voice4InitEii:0000000000000268 $d
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:274    .text._ZN7daisysp5Voice16SetTranspositionEf:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:282    .text._ZN7daisysp5Voice16SetTranspositionEf:0000000000000000 _ZN7daisysp5Voice16SetTranspositionEf
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:373    .text._ZN7daisysp5Voice16SetTranspositionEf:00000000000000f4 $d
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:384    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:392    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000000 _ZN7daisysp5Voice10NextSampleER6Buffer
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:664    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000358 $d
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:721    .data._ZZN7daisysp6myrandEvE4seed:0000000000000000 _ZZN7daisysp6myrandEvE4seed
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:693    .text._ZN7daisysp5Voice9NextIndexEv:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:701    .text._ZN7daisysp5Voice9NextIndexEv:0000000000000000 _ZN7daisysp5Voice9NextIndexEv
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccUJtSwH.s:718    .data._ZZN7daisysp6myrandEvE4seed:0000000000000000 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:15     .text._ZN7daisysp5Voice4InitEii:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:24     .text._ZN7daisysp5Voice4InitEii:0000000000000000 _ZN7daisysp5Voice4InitEii
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:246    .text._ZN7daisysp5Voice4InitEii:0000000000000268 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:274    .text._ZN7daisysp5Voice16SetTranspositionEf:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:282    .text._ZN7daisysp5Voice16SetTranspositionEf:0000000000000000 _ZN7daisysp5Voice16SetTranspositionEf
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:373    .text._ZN7daisysp5Voice16SetTranspositionEf:00000000000000f4 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:384    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:392    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000000 _ZN7daisysp5Voice10NextSampleER6Buffer
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:664    .text._ZN7daisysp5Voice10NextSampleER6Buffer:0000000000000358 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:721    .data._ZZN7daisysp6myrandEvE4seed:0000000000000000 _ZZN7daisysp6myrandEvE4seed
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:693    .text._ZN7daisysp5Voice9NextIndexEv:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:701    .text._ZN7daisysp5Voice9NextIndexEv:0000000000000000 _ZN7daisysp5Voice9NextIndexEv
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccTBmOJk.s:718    .data._ZZN7daisysp6myrandEvE4seed:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 powf

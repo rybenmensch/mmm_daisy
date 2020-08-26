@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s 			page 1
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s 			page 1
   56 006c BDEC068B 		vldm	sp!, {d8-d10}
   57 0070 C4ED000A 		vstr.32	s1, [r4]
   58 0074 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s 			page 2
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s 			page 2
 
 
   59              	.L5:
@@ -70,14 +70,14 @@ ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s 			page 1
   65 0084 00F88F40 		.word	1083176960
   66 0088 00C07F44 		.word	1149222912
   68              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM
-ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s 			page 3
+ARM GAS  /var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 pan.cpp
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s:15     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000000 $t
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s:24     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000000 _ZN7daisysp3Pan7ProcessEffRfS1_
-/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//ccOBCJCn.s:62     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000078 $d
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s:15     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000000 $t
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s:24     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000000 _ZN7daisysp3Pan7ProcessEffRfS1_
+/var/folders/wm/cgcdtysd1h320c4wmhfz4d5w0000gn/T//cciLtETV.s:62     .text._ZN7daisysp3Pan7ProcessEffRfS1_:0000000000000078 $d
 
 UNDEFINED SYMBOLS
 cos
