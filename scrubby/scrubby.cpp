@@ -18,12 +18,16 @@ const int max_loop = MAX_SIZE_LOOP;
 static DaisyPod pod;
 static Pan pan;
 
+//make a scrubber only with offsets for the knobs instead of absolute positions?
 int voice_amt;
 int active_voice;
+float prevs[2] = {0};
+float prevm[2] = {0};
+bool use_diff = false;
 
 Buffer b;
-//std::vector<Voice> Voices;
 Voice Voices[2];
+
 static void AudioCallback(float *in, float *out, size_t size);
 void UpdateButtons();
 void UpdateEncoder();
@@ -38,7 +42,6 @@ int main(void){
     voice_amt = 2;
 
     for(int i=0;i<voice_amt;i++){
-        //Voices.push_back(Voice());
         Voices[i].Init(samplerate, max_loop);
     }
 
@@ -84,17 +87,43 @@ void Controls(){
     mod = clamp((int)scale(knob2, 0, 1, 0, MAX_SIZE_LOOP/4), 0, MAX_SIZE-1);
     //mod1 = (int)scale(knob2, 0, 1, 0, MAX_SIZE_LOOP/4)+start;
 
-    for(int i=0;i<voice_amt;i++){
-        if(Voices[i].active){
-            Voices[i].start = start;
-            Voices[i].mod = mod;
+    float diffs[2] = {0}, diffm[2] = {0};
+    //difference stuff makes it less predictable but more prone to drop outs
+
+    if(use_diff){
+        for(int i=0;i<voice_amt;i++){
+            diffs[i] = start - prevs[i];
+            diffm[i] = mod - prevm[i];
+            prevs[i] = start;
+            prevm[i] = mod;
+
+            if(Voices[i].active){
+                Voices[i].start = start;
+                Voices[i].mod = mod;
+            }else{
+                /*
+                Voices[i].start = clamp(Voices[i].start+diffs[voice_amt-1], 0, MAX_SIZE-1);
+                Voices[i].mod = clamp(Voices[i].mod+diffm[voice_amt-1], 0, MAX_SIZE-1);
+                */
+                Voices[i].start = clamp(Voices[i].start+diffs[voice_amt-1-i], 0, MAX_SIZE-1);
+                Voices[i].mod = clamp(Voices[i].mod+diffm[voice_amt-1-i], 0, MAX_SIZE-1);
+            }
         }
+    }else{
+        Voices[active_voice].start = start;
+        Voices[active_voice].mod = mod;
     }
+
+    /*
+    Voices[active_voice].start = start;
+    Voices[active_voice].mod = mod;
+    */
 
     UpdateButtons();
     UpdateEncoder();
 
     pod.led1.Set(b.rec, b.play, 0);
+    pod.led2.Set(0, 0, use_diff);
     pod.UpdateLeds();
 }
 
@@ -104,6 +133,9 @@ void UpdateButtons(){
             b.play = false;
             b.rec = true;
         }
+    }
+    if(pod.button1.RisingEdge()){
+        use_diff = !use_diff;
     }
 }
 
@@ -116,22 +148,10 @@ void UpdateEncoder(){
     }
 
     int inc = pod.encoder.Increment();
-    //this is dumb, either have active voice, or active flag
-    //if we have active voice int we don't need to loop through
-    //but can just access directly:
-    //float temp = voices[active_voice].transpose + inc;
-    //voices[active_voice].SetTransposition(CLAMP(temp, -12, 12));
-    //but this is also dumb because we need the global variable active_voice
-    //for this...
 
-    Voices[0].SetTransposition(0);
-    Voices[1].SetTransposition(-5);
-    /*
-    for(int i=0;i<voice_amt;i++){
-        if(Voices[i].active){
-            float temp = Voices[i].transpose + inc;
-            Voices[i].SetTransposition(clamp(temp, -12, 12));
-        }
-    }
-    */
+    float temp = Voices[active_voice].transpose + inc;
+    Voices[0].SetTransposition(temp);
+    Voices[1].SetTransposition(temp);
+
+    //Voices[active_voice].SetTransposition(clamp(temp, -12, 12));
 }
